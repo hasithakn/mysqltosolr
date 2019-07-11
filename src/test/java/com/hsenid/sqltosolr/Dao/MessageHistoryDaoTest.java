@@ -18,7 +18,7 @@ public class MessageHistoryDaoTest {
     @Test
     public void getRange() {
         MessageHistoryDao messageHistoryDao =new MessageHistoryDao();
-        ArrayList<MessageHistory> range = messageHistoryDao.getRange(100000, 1);
+        ArrayList<MessageHistory> range = messageHistoryDao.getRange(0, 1);
         MessageHistory messageHistory = range.get(0);
         Timestamp receive_date = messageHistory.getReceive_date();
         System.out.println(receive_date);

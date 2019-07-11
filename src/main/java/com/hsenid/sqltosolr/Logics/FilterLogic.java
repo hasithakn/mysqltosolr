@@ -46,9 +46,18 @@ public class FilterLogic {
     }
 
     public String timestampToISO(Date date) {
-        String pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'";
-        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
-        String isoTS = sdf.format(date);
-        return isoTS;
+        try {
+            String pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'";
+            SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+            String isoTS = sdf.format(date);
+            return isoTS;
+        } catch (Exception e) {
+            if (date != null) {
+                return date.toString();
+            } else {
+                return "";
+            }
+
+        }
     }
 }
