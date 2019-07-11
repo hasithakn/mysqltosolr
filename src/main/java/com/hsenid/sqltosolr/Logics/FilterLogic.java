@@ -7,6 +7,8 @@ import java.nio.file.Files;
 import java.nio.file.OpenOption;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class FilterLogic {
     public FilterLogic() {
@@ -41,5 +43,12 @@ public class FilterLogic {
     public String[] getFields(String line) {
         String[] split = line.split("\\|");
         return split.length == 4 ? split : null;
+    }
+
+    public String timestampToISO(Date date) {
+        String pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'";
+        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+        String isoTS = sdf.format(date);
+        return isoTS;
     }
 }
