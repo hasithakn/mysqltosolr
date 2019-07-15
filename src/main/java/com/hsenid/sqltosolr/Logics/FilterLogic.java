@@ -40,6 +40,22 @@ public class FilterLogic {
         return count == 0;
     }
 
+    public String removeNewline(String line) {
+        return line.replaceAll("\n", " ");
+    }
+
+    public String removeBackSlash(String line) {
+        return line.replaceAll("\\\\", " ");
+    }
+
+    public String removeBackSlashR(String line) {
+        return line.replaceAll("\r", " ");
+    }
+
+    public String removeTab(String line) {
+        return line.replaceAll("\t", " ");
+    }
+
     public String[] getFields(String line) {
         String[] split = line.split("\\|");
         return split.length == 4 ? split : null;

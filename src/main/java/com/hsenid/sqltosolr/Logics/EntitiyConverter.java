@@ -11,7 +11,6 @@ public class EntitiyConverter {
 
         Timestamp receive_date = messageHistory.getReceive_date();
         if (receive_date != null) {
-
             FilterLogic filterLogic = new FilterLogic();
             CSVData csvData = new CSVData();
             csvData.setApp_id(messageHistory.getApp_id());
