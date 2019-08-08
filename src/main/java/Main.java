@@ -13,8 +13,7 @@ public class Main {
         MessageHistoryDao messageHistoryDao = new MessageHistoryDao();
 
         CSVDataDao csvDataDao = new CSVDataDao();
-        String core = "experimentCore";
-
+        String core = "experiment3";
 //        messageHistoryDao.get();
 
         int rows = messageHistoryDao.getSize();

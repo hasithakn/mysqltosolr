@@ -12,7 +12,7 @@ public class MessageHistoryDao {
         Connection con = MYSQLConnecter.getConnection();
         PreparedStatement statement = null;
 
-        String queryStatement = "SELECT * FROM message_history limit ";
+        String queryStatement = "SELECT * FROM analysis1 limit ";
         String noOfRows = "SELECT count(*) as a FROM message_history";
 
         try {
